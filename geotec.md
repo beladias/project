@@ -1,0 +1,41 @@
+---
+layout: projects
+title: Geotec - Preventing disasters
+category: Product Design
+---
+
+<article class="netflix">
+    <figure>
+        <img src="{{ "/assets/img/geotec.png" | relative_url }}" alt="geotec prototype">
+        <figcaption>
+            <p>Preventing disasters</p>
+        </figcaption>
+    </figure>
+</article>
+<section class="grid">
+    <div class="grid-1">
+        <strong>Context</strong>
+        <p>n 2019, a dam burst in Minas Gerais that caused more than 270 deaths and gigantic environmental impacts, so Vale came with the challenge of improving the dam inspection and monitoring process in both Brazil and Canada, to install the culture of disaster prevention in the company.</p>
+        <p><strong>My role:</strong> Product Designer with focus on facilitation.</p>
+    </div>
+    <div class="grid-2">
+        <strong>Process</strong>
+        <ul>
+            <li>Journey map</li>
+            <li>Personas</li>
+            <li>MVP</li>
+            <li>Test</li>
+            <li>OKR</li>    
+        </ul>
+        <p>During the research process, we mapped the entire flow of inspection and monitoring in both countries and found that a large part of this documentation was made on paper and had no follow-up, just as the current system did not help the user to complete his tasks efficiently. We identified 3 personas, which we defined through interviews and the journey map, but we decided to focus on the field technician as the main user for our MVP. And we defined to generate 4 main functionalities to remedy the pains of this persona, which would be the inspection, monitoring, flow of creation of specific inspections and alerts of exceeding the limit in the system.</p>
+    </div>
+    <article class="geotec">
+    <figure>
+        <img src="{{ "/assets/img/geotec01.png" | relative_url }}" alt="geotec prototype">
+    </figure>
+    </article>
+    <div class="grid-3">
+        <strong>Results</strong>
+        <p>We tested this solution with 05 participants and the result was very positive, with only a few specific improvements raised. This project was run as a pilot in some Vale structures and as OKR we defined the reduction of 70% of the anomalies identified without an action plan and an NPS of 8 among users, as a result we were able to reduce the anomalies by more than 60% and an NPS of 9.</p>
+    </div>
+</section>
