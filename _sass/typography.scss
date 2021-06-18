@@ -1,0 +1,70 @@
+@import "colors";
+
+@mixin font {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: $text;
+    margin: 0;
+}
+
+@mixin heading1 {
+    @include font();
+    font-size: 72px;
+    line-height: auto;
+    font-weight: 700;
+}
+
+@mixin heading2 {
+    @include font();
+    font-size: 48px;
+    line-height: auto;
+    font-weight: 700;
+}
+
+@mixin heading3 {
+    @include font();
+    font-size: 32px;
+    line-height: auto;
+    font-weight: 700;
+}
+
+@mixin heading4 {
+    @include font();
+    font-size: 24px;
+    line-height: auto;
+    font-weight: 700;
+}
+
+@mixin heading5 {
+    @include font();
+    font-size: 20px;
+    line-height: auto;
+    font-weight: 700;
+}
+
+@mixin p-medium {
+    @include font();
+    font-size: 16px;
+    line-height: auto;
+    font-weight: 500;
+}
+
+@mixin p-regular {
+    @include font();
+    font-size: 16px;
+    line-height: auto;
+    font-weight: 400;
+}
+
+@mixin p-small-bold {
+    @include font();
+    font-size: 14px;
+    line-height: auto;
+    font-weight: 700;
+}
+
+@mixin p-small-medium {
+    @include font();
+    font-size: 14px;
+    line-height: auto;
+    font-weight: 500;
+}

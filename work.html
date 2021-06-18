@@ -3,6 +3,7 @@ layout: work
 title: Work
 ---
 
+
 {% for project in site.data.work %}
     <div class="project">
       <a href="{{ site.baseurl }}{{ project.perma }}">
@@ -21,4 +22,4 @@ title: Work
         </div>
       </a>
     </div>
-    {% endfor %}
+{% endfor %}

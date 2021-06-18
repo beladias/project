@@ -1,0 +1,87 @@
+h1 {
+    text-align: center;
+}
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+main {
+    padding-top: 120px;
+}
+body {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    padding: 15px 0;
+    width: 100%;
+    background: $primary;
+
+    .max-width { 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu li {
+        list-style: none;
+        display: inline-block;
+
+        a {
+            color: $white;
+            margin-left: 25px;
+        }
+    }
+
+    .logo a {
+        color: $white;
+    }
+
+}
+/* ABOUT */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.column-left {
+    width: 45%;
+}
+
+.column-left img {
+    height: 400px;
+    width: 400px;
+    border-radius: 6px;
+}
+
+.column-right {
+    width: 55%;
+}
+
+.column-right p {
+    text-align: justify;
+    margin-right: 100px;
+}
+
+.btn-cv {
+    display: inline-block;
+    background: $primary;
+    padding: 8px 24px;
+    margin-top: 24px;
+    border-radius: 6px;
+    border: 2px solid $primary;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: $white;
+}
+
+.btn-cv:hover {
+    background: none;
+    color: $primary;
+}

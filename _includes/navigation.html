@@ -1,5 +1,5 @@
 <nav>
-    <ul>
+    <ul class="menu">
        {% for navigation in site.data.navigation.docs %}
        {% assign lowercase_title = navigation.title | downcase %}
        <li class="{% if lowercase_title == page.layout %}active{% endif %}">
