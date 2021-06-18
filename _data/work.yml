@@ -3,7 +3,6 @@
   desc: Giving my lists a new purpose
   img: /assets/img/netflix.png
   perma: /netflix
-  tag: netflix
   image-alt: Netflix thumbnail
 
 - title: Geotec
@@ -11,7 +10,6 @@
   desc: Preventing disasters
   img: /assets/img/geotec.png
   perma: /geotec
-  tag: geotec
   image-alt: geotec thumbnail
 
   
