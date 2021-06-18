@@ -1,6 +1,6 @@
 ---
 layout: work
-title: Selected Work
+title: Work
 ---
 
 <h1>{{ page.title }}</h1>
@@ -8,17 +8,15 @@ title: Selected Work
 <h2>Projects I've been working in the past year</h2>
 
 <ul>
-    {% for project in site.projects reversed %}
-        {% if project.category == "Product Design" %}
+    {% for project in site.data.work %}
         <hr>
         <li class="worklist">
-            <a href= "{{ project.link }}" title="{{ project.title }}"> 
+            <a href="{{ site.baseurl }}{{ project.perma }}"> 
             {{ project.title }}
             <figure>
-                <img src="{{ project.image-src }}" alt="{{ project.image-alt }}" title="{{ project.image-alt }}">
+                <img src="{{ site.baseurl }}{{ project.img }}" alt="{{ project.image-alt }}" title="{{ project.image-alt }}">
             </figure>
             </a>
         </li>
-        {% endif %}
     {% endfor %}
 </ul>
