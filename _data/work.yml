@@ -2,14 +2,14 @@
   category: Product Design
   desc: Giving my lists a new purpose
   img: /assets/img/netflix.png
-  perma: /netflix
+  perma: /project/netflix
   image-alt: Netflix thumbnail
 
 - title: Geotec
   category: Product Design
   desc: Preventing disasters
   img: /assets/img/geotec.png
-  perma: /geotec
+  perma: /project/geotec
   image-alt: geotec thumbnail
 
   
