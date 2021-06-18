@@ -61,7 +61,7 @@ img {
     padding-right: 16px;
 }
 
-/* NAVBAR SASS posição fixa, precisamos definir o local onde ele fica*/
+/* NAVBAR */
 .navbar {
     position: fixed;
     padding: 15px;
@@ -118,6 +118,19 @@ img {
         text-align: center;
     }
 }
+
+.animation-color {
+    color: $primary;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+@keyframes example {
+    0%   {color: $primary;}
+    25%  {color: $secondary;}
+    50%  {color: $text}
+    100% {color: $accent;}
+  }
 
 /* ABOUT */
 .about,
