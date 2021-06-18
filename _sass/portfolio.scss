@@ -3,22 +3,40 @@ h1 {
 }
 .max-width {
     max-width: 1300px;
-    padding: 0 80px;
-    margin: auto;
+    margin: 0 auto;
 }
 main {
-    padding-top: 120px;
+    padding-top: 60px;
+
+    @media (min-width: 768px) {
+        padding-top: 120px;
+      }
 }
 body {
     padding: 0;
     margin: 0;
     border: 0;
 }
-/* NAVBAR */
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 960px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+/* NAVBAR SASS posição fixa, precisamos definir o local onde ele fica*/
 .navbar {
     position: fixed;
-    padding: 15px 0;
-    width: 100%;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    right: 0;
     background: $primary;
 
     .max-width { 
@@ -27,7 +45,17 @@ body {
         justify-content: space-between;
     }
 
-    .menu li {
+    .menu {
+        padding-left: 0px;
+            list-style: none;
+            margin-top: 0;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+    
+    li {
         list-style: none;
         display: inline-block;
 
@@ -36,37 +64,70 @@ body {
             margin-left: 25px;
         }
     }
+}
 
     .logo a {
         color: $white;
     }
 
 }
+
 /* ABOUT */
-.about {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+.about,
+.align-items {
+    margin-bottom: 24px;
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-between;
+      }
 }
 
 .column-left {
-    width: 45%;
-}
+    width: 100%;
 
-.column-left img {
-    height: 400px;
-    width: 400px;
-    border-radius: 6px;
+    @media (min-width: 768px) {
+        width: 45%;
+      }
+
+    figure {
+        height: 100%;
+    
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-radius: 6px;
+        }
+    }
 }
 
 .column-right {
-    width: 55%;
+    width: 100%;
+
+    @media (min-width: 768px) {
+        width: 55%;
+      }
+
+      .align-btn {
+        text-align: center;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            text-align: left;
+          }
+      }
+
 }
 
 .column-right p {
-    text-align: justify;
-    margin-right: 100px;
+    text-align: left;
+
+    @media (min-width: 768px) {
+        margin-right: 20px;
+      }
 }
 
 .btn-cv {
@@ -79,9 +140,121 @@ body {
     transition: all 0.3s ease;
     text-decoration: none;
     color: $white;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btn-cv:hover {
     background: none;
     color: $primary;
 }
+
+/* Home */
+
+.home {
+    display: flex;
+}
+
+.content{
+    align-items: center;
+    text-align: center;
+}
+
+/* work */
+
+.work {
+    display: flex;
+    flex-wrap: wrap;
+    }
+    
+    .project {
+        width: 98%;
+        margin: 0 1%;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        overflow: hidden;
+        border-radius: 20px;
+        margin-bottom: 24px;
+
+        @media (min-width: 768px) {
+            width: 48%;
+          }
+        .text {
+            text-align: center;
+            padding: 10px 20px;
+        }
+    
+        figure {
+            width: 100%;
+            height: 200px;
+            margin: 0;
+    
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+    }
+
+    /* work detail */
+
+    .project-article {
+
+        figure, p {
+            margin-bottom: 24px;
+        }
+    }
+
+    /* contact */
+    .contact {
+
+        text-align: center;
+
+        p{
+            text-align: center;
+        }
+
+        .btn-cv{
+            align-items: center;
+        }
+    }
+
+
+    /* footer */
+    footer {
+        padding-left: 1.5rem;
+        @include p-small-medium();
+        margin-bottom: 30px;
+        margin-top: 48px;
+        padding: 0 80px;
+        text-align: center;
+        
+        
+        ul {
+            padding-left: 0px;
+            list-style: none;
+            margin-top: 0;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            li {
+                list-style: none;
+                display: inline-block;
+                margin: 0 12px;
+                white-space: nowrap;
+            }
+
+            a {
+                text-decoration: none;
+                color: $primary;
+            }
+        }
+        p {
+            margin: 8px;
+            margin-left: 0px;
+        }
+    }

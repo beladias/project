@@ -4,22 +4,23 @@ title: Work
 ---
 
 
-{% for project in site.data.work %}
+
+<h1>Work</h1>  
+<div class="work">
+    {% for project in site.data.work %}
     <div class="project">
       <a href="{{ site.baseurl }}{{ project.perma }}">
         <div>
           <figure>
            <img src="{{ site.baseurl }}{{ project.img }}" alt="{{ project.title }}">
         </figure>
-          <div>
-            <h2>
+          <div class="overlay">
+            <h2 class="text">
               {{ project.title }}
             </h2>
-            <p>
-              {{ project.desc }}
-            </p>
           </div>
-        </div>
       </a>
     </div>
+    </div>
 {% endfor %}
+</div>
