@@ -1,21 +1,52 @@
-h1 {
-    text-align: center;
-}
 .max-width {
     max-width: 1300px;
-    margin: 0 auto;
+    margin: auto;
 }
 main {
     padding-top: 60px;
 
     @media (min-width: 768px) {
-        padding-top: 120px;
-      }
+        padding-top: 100px;
+    }
 }
 body {
+    @include font();
     padding: 0;
     margin: 0;
     border: 0;
+
+    h1 {
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: $primary;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: $secondary;
+    }
+
+    .btn-cv {
+        display: inline-block;
+        background: $primary;
+        padding: 8px 24px;
+        margin-top: 24px;
+        border-radius: 6px;
+        border: 2px solid $primary;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: $white;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn-cv:hover {
+        background: none;
+        color: $primary;
+    }
 }
 
 img {
@@ -28,7 +59,7 @@ img {
     max-width: 960px;
     padding-left: 16px;
     padding-right: 16px;
-  }
+}
 
 /* NAVBAR SASS posição fixa, precisamos definir o local onde ele fica*/
 .navbar {
@@ -37,9 +68,9 @@ img {
     top: 0;
     left: 0;
     right: 0;
-    background: $primary;
+    background: $background;
 
-    .max-width { 
+    .max-width {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -47,29 +78,45 @@ img {
 
     .menu {
         padding-left: 0px;
-            list-style: none;
-            margin-top: 0;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-    
-    li {
         list-style: none;
-        display: inline-block;
+        margin-top: 0;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
 
-        a {
-            color: $white;
-            margin-left: 25px;
+        li {
+            list-style: none;
+            display: inline-block;
+
+            a {
+                color: $text;
+                margin-left: 25px;
+            }
+
+            a:hover {
+                text-decoration: none;
+                color: $primary;
+            }
         }
     }
-}
 
     .logo a {
         color: $white;
     }
+}
 
+/* Home */
+
+.home {
+    display: flex;
+    min-height: 60vh;
+
+    .content {
+        align-items: center;
+        text-align: center;
+    }
 }
 
 /* ABOUT */
@@ -82,7 +129,7 @@ img {
         flex-wrap: wrap;
         align-items: stretch;
         justify-content: space-between;
-      }
+    }
 }
 
 .column-left {
@@ -90,11 +137,11 @@ img {
 
     @media (min-width: 768px) {
         width: 45%;
-      }
+    }
 
     figure {
         height: 100%;
-    
+
         img {
             object-fit: cover;
             height: 100%;
@@ -109,152 +156,118 @@ img {
 
     @media (min-width: 768px) {
         width: 55%;
-      }
+    }
 
-      .align-btn {
+    .align-btn {
         text-align: center;
         width: 100%;
 
         @media (min-width: 768px) {
             text-align: left;
-          }
-      }
+        }
+    }
 
+    .column-right p {
+        text-align: left;
+
+        @media (min-width: 768px) {
+            margin-right: 20px;
+        }
+    }
 }
-
-.column-right p {
-    text-align: left;
-
-    @media (min-width: 768px) {
-        margin-right: 20px;
-      }
-}
-
-.btn-cv {
-    display: inline-block;
-    background: $primary;
-    padding: 8px 24px;
-    margin-top: 24px;
-    border-radius: 6px;
-    border: 2px solid $primary;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    color: $white;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.btn-cv:hover {
-    background: none;
-    color: $primary;
-}
-
-/* Home */
-
-.home {
-    display: flex;
-}
-
-.content{
-    align-items: center;
-    text-align: center;
-}
-
 /* work */
 
 .work {
     display: flex;
     flex-wrap: wrap;
-    }
-    
-    .project {
-        width: 98%;
-        margin: 0 1%;
-        background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        overflow: hidden;
-        border-radius: 20px;
-        margin-bottom: 24px;
+}
 
-        @media (min-width: 768px) {
-            width: 48%;
-          }
-        .text {
-            text-align: center;
-            padding: 10px 20px;
-        }
-    
-        figure {
-            width: 100%;
-            height: 200px;
-            margin: 0;
-    
+.project {
+    width: 98%;
+    margin: 0 1%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 24px;
+
+    @media (min-width: 768px) {
+        width: 48%;
+    }
+    .text {
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    figure {
+        width: 100%;
+        height: 200px;
+        margin: 0;
+
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-          }
         }
     }
+}
 
-    /* work detail */
+/* work detail */
 
-    .project-article {
-
-        figure, p {
-            margin-bottom: 24px;
-        }
+.project-article {
+    figure,
+    p {
+        margin-bottom: 24px;
     }
+}
 
-    /* contact */
-    .contact {
+/* contact */
+.contact {
+    min-height: 60vh;
+    text-align: center;
 
+    p {
         text-align: center;
-
-        p{
-            text-align: center;
-        }
-
-        .btn-cv{
-            align-items: center;
-        }
     }
 
+    .btn-cv {
+        align-items: center;
+    }
+}
 
-    /* footer */
-    footer {
-        padding-left: 1.5rem;
-        @include p-small-medium();
-        margin-bottom: 30px;
-        margin-top: 48px;
-        padding: 0 80px;
-        text-align: center;
-        
-        
-        ul {
-            padding-left: 0px;
+/* footer */
+footer {
+    padding-left: 1.5rem;
+    @include p-small-medium();
+    margin-bottom: 30px;
+    margin-top: 48px;
+    padding: 0 80px;
+    text-align: center;
+
+    ul {
+        padding-left: 0px;
+        list-style: none;
+        margin-top: 0;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        li {
             list-style: none;
-            margin-top: 0;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-
-            li {
-                list-style: none;
-                display: inline-block;
-                margin: 0 12px;
-                white-space: nowrap;
-            }
-
-            a {
-                text-decoration: none;
-                color: $primary;
-            }
+            display: inline-block;
+            margin: 0 12px;
+            white-space: nowrap;
         }
-        p {
-            margin: 8px;
-            margin-left: 0px;
+
+        a {
+            text-decoration: none;
+            color: $primary;
         }
     }
+    p {
+        margin: 8px;
+        margin-left: 0px;
+    }
+}
