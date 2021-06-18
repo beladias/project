@@ -2,6 +2,7 @@
 layout: projects
 title: Geotec - Preventing disasters
 category: Product Design
+permalink: /geotec
 ---
 
 <article class="netflix">

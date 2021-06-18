@@ -2,6 +2,7 @@
 layout: projects
 title: Netflix - Giving lists a new purpose
 category: Product Design
+permalink: /netflix
 ---
 
 <article class="netflix">
