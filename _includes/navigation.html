@@ -1,0 +1,12 @@
+<nav>
+    <ul>
+       {% for navigation in site.data.navigation.docs %}
+       {% assign lowercase_title = navigation.title | downcase %}
+       <li class="{% if lowercase_title == page.layout %}active{% endif %}">
+          <a href="{{ navigation.url }}" title="{{ navigation.title }}">
+             {{ navigation.title }}
+          </a>
+       </li>
+       {% endfor %}
+    </ul>
+ </nav>

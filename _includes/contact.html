@@ -1,0 +1,17 @@
+<ul>
+    {% for contact in site.data.contactslist %}
+       {% if contacts-list.link-title == "E-mail" %}
+       <li>
+          <a href="mailto: {{ contact.link }}" target="_blank" title="{{ contact.link-title }}">
+       {{ contact.link-title }}
+          </a>
+       </li>
+       {% else %}
+       <li>
+          <a href="{{ contact.link }}" target="_blank" title="{{ contact.link-title }}">
+          {{ contact.link-title }}
+          </a>
+       </li>
+       {% endif %}
+    {% endfor %}
+ </ul>

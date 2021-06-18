@@ -1,0 +1,11 @@
+docs_list_title: navigation
+docs:
+
+- title: About
+  url: about.html
+
+- title: Work
+  url: work.html
+
+- title: Contact
+  url: contact.html
